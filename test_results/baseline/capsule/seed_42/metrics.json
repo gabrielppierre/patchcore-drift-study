@@ -1,0 +1,12 @@
+{
+  "image_AUROC": 0.9924212098121643,
+  "image_F1Score": 0.9727272987365723,
+  "pixel_AUROC": 0.9899746179580688,
+  "pixel_F1Score": 0.514907717704773,
+  "train_seconds": 76.99676678499964,
+  "test_seconds": 15.575339297000028,
+  "train_peak_gpu_mem_mib": 6454.0,
+  "test_peak_gpu_mem_mib": 3904.0,
+  "seed": 42,
+  "category": "capsule"
+}
