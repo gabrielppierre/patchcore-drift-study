@@ -6,11 +6,11 @@ This repository contains the code to reproduce the main experiments from the pap
 > Gabriel Coelho, Cleber Zanchettin  
 > Centro de Informática, Universidade Federal de Pernambuco
 
-## 📋 Overview
+## Overview
 
 We evaluate the effectiveness of a lightweight FIFO-based dynamic memory mechanism for mitigating covariate shift in PatchCore-based anomaly detection. The experiments focus on 5 challenging MVTec AD categories: `capsule`, `grid`, `leather`, `screw`, and `wood`.
 
-## 🛠️ Requirements
+## Requirements
 
 - Python 3.10+
 - CUDA-capable GPU (tested on NVIDIA RTX 4060 8GB)
@@ -30,7 +30,7 @@ conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 code/
@@ -44,7 +44,7 @@ code/
     └── metrics_ci.py            # Confidence interval computation
 ```
 
-## 📊 Dataset
+## Dataset
 
 Download MVTec AD from [https://www.mvtec.com/company/research/datasets/mvtec-ad](https://www.mvtec.com/company/research/datasets/mvtec-ad) and extract to `data/mvtec_anomaly_detection/`.
 
@@ -58,7 +58,7 @@ data/mvtec_anomaly_detection/
 └── zipper/
 ```
 
-## 🚀 Running Experiments
+## Running Experiments
 
 ### Step 1: Train Baseline PatchCore (all 15 categories)
 
@@ -98,7 +98,7 @@ python run_dynamic_memory.py --buffer-mode none --output-root results/ablations/
 python run_dynamic_memory.py --buffer-mode strong --output-root results/ablations/strong_buffer
 ```
 
-## 📈 Output Format
+## Output Format
 
 Results are saved as JSON files with confidence intervals:
 
@@ -125,7 +125,7 @@ Example `summary_with_ci.json`:
 }
 ```
 
-## 🔧 Key Parameters
+## Key Parameters
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
@@ -135,7 +135,7 @@ Example `summary_with_ci.json`:
 | `--num-workers` | 4 | DataLoader workers |
 | `--buffer-mode` | default | Buffer augmentation: `default`, `none`, `strong` |
 
-## 📝 Drift Protocol
+## Drift Protocol
 
 We simulate covariate shift using intensity-based augmentations applied to validation/test data:
 
@@ -149,7 +149,7 @@ DRIFT_TRANSFORM = T.Compose([
 
 This simulates lighting changes, sensor noise, and focus variations common in industrial settings.
 
-## 📖 Citation
+## Citation
 
 If you use this code, please cite:
 
@@ -162,6 +162,6 @@ If you use this code, please cite:
 }
 ```
 
-## 📄 License
+## License
 
 This code is released for academic research purposes. The MVTec AD dataset has its own license terms.
