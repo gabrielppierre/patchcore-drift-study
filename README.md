@@ -154,12 +154,7 @@ This simulates lighting changes, sensor noise, and focus variations common in in
 If you use this code, please cite:
 
 ```bibtex
-@inproceedings{coelho2026patchcore,
-  title={Enhancing PatchCore Robustness to Covariate Shift with Dynamic Memory},
-  author={Coelho, Gabriel and Zanchettin, Cleber},
-  booktitle={IEEE International Conference on Image Processing (ICIP)},
-  year={2026}
-}
+
 ```
 
 ## License
